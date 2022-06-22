@@ -1,0 +1,143 @@
+@import 'fonts.css';
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   text-decoration: none;
+   list-style: none;
+   font-family: 'raleway';
+   color: #ffffff;
+}
+/* icons */
+*::before,
+*::after{
+   font-family: 'icons';
+}
+/* menu */
+.menu{
+   width: 100%;
+   background: #292929;
+}
+.menu__main{
+   max-width: 1600px;
+   display: flex;
+   /* flex-direction: column; */
+   background: #292929;
+   flex-wrap: wrap;
+   margin: 0 auto;
+   justify-content: center;
+   border: 1px solid #417D11;
+}
+.menu__list{
+   max-width: 1600px;
+   width: 100%;
+   min-height: 65px;
+   display: flex;
+   align-items: flex-start;
+   border: 1px solid red;
+   margin: 0 auto;
+}
+.menu__list--text{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   gap: 31px;
+   height: 100%;
+   padding-left: 20px;
+}
+.menu__list--text a{
+   padding: 20px 0;
+   display: inline-flex;
+   font-size: 18px;
+   line-height: 24px;
+   font-weight: 400;
+   color: #ffffff;
+   position: relative;
+}
+.menu__list--text a::before{
+   width: 100%;
+   height: 3px;
+   background: #ffffff;
+   position: absolute;
+   content: '';
+   left: 0;
+   bottom: 0;
+   border-radius: 2px 2px 0 0;
+   transform: scaleX(0);
+   transition: transform 0.4s;
+}
+.menu__list--text a:hover::before{
+   transform: scaleX(1);
+}
+.menu__cards{
+  width: 100%;
+  padding: 15px;
+  background: #393636;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: 1px solid red;
+ 
+}
+.menu__cards--card{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 30px;
+   justify-content: center;
+   border: 1px solid green;
+}
+.menu__card{
+   max-width: 365px;
+   width: 23%;
+   border-radius: 4px;
+   border: 1px solid #fff;
+   background: #000;
+   padding: 15px;
+   position: relative;
+   cursor: pointer;
+   overflow: hidden;
+   /* margin: 0 auto; */
+}
+.card-img{
+   width: 100%;
+   position: relative;
+}
+.card-img__burger{
+   width: 100%;
+}
+.icon-link{
+   /* border: 1px solid saddlebrown; */
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   content: '';
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   transition: 0.3s;
+   overflow: hidden;
+}
+.menu__card:hover .icon-link{
+   background: rgba(105, 207, 23, 0.9);
+}
+.card-img a img{
+   width: 63px;
+   display: none;
+}
+.menu:hover .card-img a img{
+   display: flex;
+   position: absolute;
+   content: '';
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+.menu__card h2{
+   font-weight: 700;
+   font-size: 19px;
+   line-height: 15px;
+   margin: 15px 0;
+
+}
+.menu__card p{
+   font-size: 19px;
+   line-height: 25px;
+}
